@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently --kill-others \"ng serve\" \"ts-node-dev server/server.ts\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,7 +19,11 @@
     "@angular/platform-browser": "~10.0.14",
     "@angular/platform-browser-dynamic": "~10.0.14",
     "@angular/router": "~10.0.14",
+    "bootstrap": "^5.0.1",
+    "concurrently": "^6.2.0",
+    "jquery": "^3.6.0",
     "rxjs": "~6.5.5",
+    "ts-node-dev": "^1.1.6",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
